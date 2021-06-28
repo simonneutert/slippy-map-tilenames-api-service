@@ -1,4 +1,4 @@
-# TODO: Write documentation for `Slippy`
+# tile extraction rest micro service
 require "kemal"
 require "slippy_tiles"
 require "json"
@@ -18,7 +18,8 @@ end
 
 # The request content type needs to be application/json
 # The payload
-# {"pois": ["{lat: 50.0, lng: 8.0, zoom: 14}"]}
+# {"zoom": 14, "pois": ["{lat: 50.0, lng: 8.0}"]}
+#
 post "/json_params" do |env|
   pois = env.params.json["pois"].as(Array)
   zoom = env.params.json["zoom"].as(Int64)
@@ -29,7 +30,7 @@ post "/json_params" do |env|
       results << {"lat" => poi["lat"].as_f, "lng" => poi["lng"].as_f}
     end
   end
-  {zoom: zoom, result: extract_tiles_from_pois(results, zoom.to_u8).values}.to_json  
+  {zoom: zoom, result: extract_tiles_from_pois(results, zoom.to_u8).values}.to_json
 end
 
 Kemal.run
