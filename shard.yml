@@ -1,0 +1,18 @@
+name: slippy
+version: 0.1.0
+
+authors:
+  - Simon Neutert <simonneutert@users.noreply.github.com>
+
+targets:
+  slippy:
+    main: src/slippy.cr
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  slippy_tiles:
+    github: simonneutert/slippy_tiles
+
+crystal: 1.0.0
+
+license: MIT
