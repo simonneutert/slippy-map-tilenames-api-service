@@ -30,7 +30,9 @@ Simply run this command:
 
 `$ crystal build src/slippy.cr --release`
 
-`$ KEMAL_ENV=production ./slippy`
+https://stackoverflow.com/a/48845880
+
+`$ KEMAL_ENV=production ./slippy 3000` 
 
 ``` bash
 $ curl -i --header "Content-Type: application/json" --request POST --data '{"zoom": 14, "pois": [{"lat":50.0, "lng":8.0}, {"lat":50.0, "lng":8.0}, {"lat":51.0, "lng":8.0}, ]}' http://localhost:3000/geopoints
@@ -40,7 +42,6 @@ $ curl -i --header "Content-Type: application/json" --request POST --data '{"zoo
 
 - Crystal v1.0
 - Kemal (kemalcr.com)
-
 ### Run tests
 
 `$ KEMAL_ENV=test crystal spec`

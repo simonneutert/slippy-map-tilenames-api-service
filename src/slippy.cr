@@ -33,4 +33,6 @@ post "/geopoints" do |env|
   {zoom: zoom, result: extract_tiles_from_pois(results, zoom.to_u8).values}.to_json
 end
 
-Kemal.run
+port = ARGV[0]?.try &.to_i?
+default_port = 3000
+Kemal.run(port || default_port)
