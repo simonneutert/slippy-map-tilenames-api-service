@@ -20,7 +20,7 @@ end
 # The payload
 # {"zoom": 14, "pois": ["{lat: 50.0, lng: 8.0}"]}
 #
-post "/json_params" do |env|
+post "/geopoints" do |env|
   pois = env.params.json["pois"].as(Array)
   zoom = env.params.json["zoom"].as(Int64)
   puts typeof(zoom)

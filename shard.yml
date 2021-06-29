@@ -8,6 +8,9 @@ targets:
   slippy:
     main: src/slippy.cr
 dependencies:
+  spec-kemal:
+    github: kemalcr/spec-kemal
+    branch: master
   kemal:
     github: kemalcr/kemal
   slippy_tiles:

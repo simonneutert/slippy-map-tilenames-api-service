@@ -1,22 +1,53 @@
 # slippy
 
-TODO: Write a description here
+this is a tiny service you can use as a synchronous api service
+
+if you need to have asyncronous operations, I suggest to simply add a gateway microservice in front of this one managing webhooks.
+
+at best you modify this project to work with webhooks or without and push your changes.
+
+By default this service runs on `http://0.0.0.0:3000`
 
 ## Installation
 
-TODO: Write installation instructions here
+Have Crystal Lang in version 1.0 installed and fully working (OpenSSL and such).
+
+### Mac / OpenSSL / zsh
+Mac/Zsh users might need to append this to `~/.zshrc`
+
+`export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig`
+
+### Install project dependencies
+
+`$ shards install`
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply run this command:
+
+`$ crystal run src/slippy.cr`
+### Build and Run in Production Mode
+
+`$ crystal build src/slippy.cr --release`
+
+`$ KEMAL_ENV=production ./slippy`
+
+``` bash
+$ curl -i --header "Content-Type: application/json" --request POST --data '{"zoom": 14, "pois": [{"lat":50.0, "lng":8.0}, {"lat":50.0, "lng":8.0}, {"lat":51.0, "lng":8.0}, ]}' http://localhost:3000/geopoints
+```
 
 ## Development
 
-TODO: Write development instructions here
+- Crystal v1.0
+- Kemal (kemalcr.com)
+
+### Run tests
+
+`$ KEMAL_ENV=test crystal spec`
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/slippy/fork>)
+1. Fork it (<https://github.com/simonneutert/slippy/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -24,4 +55,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Simon Neutert](https://github.com/your-github-user) - creator and maintainer
+- [Simon Neutert](https://github.com/simonneutert) - creator and maintainer

@@ -20,3 +20,7 @@ shards:
     git: https://github.com/simonneutert/slippy_tiles.git
     version: 0.1.0+git.commit.6ba686c78ff0675f45019e52ae0b0189ec3e3543
 
+  spec-kemal:
+    git: https://github.com/kemalcr/spec-kemal.git
+    version: 1.0.0+git.commit.d0cf79de3e7fa542412e143240c06ccf5c75861b
+
