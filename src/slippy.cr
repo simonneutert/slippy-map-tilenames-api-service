@@ -23,7 +23,6 @@ end
 post "/geopoints" do |env|
   pois = env.params.json["pois"].as(Array)
   zoom = env.params.json["zoom"].as(Int64)
-  puts typeof(zoom)
   results = Array(Hash(String, Float64)).new
   if pois.is_a?(Array)
     pois.each do |poi|
