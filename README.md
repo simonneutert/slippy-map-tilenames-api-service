@@ -2,6 +2,8 @@
 
 this is a tiny service you can use as a synchronous api service
 
+it makes this shard accessible via a REST API https://github.com/simonneutert/slippy_tiles
+
 if you need to have asyncronous operations, I suggest to simply add a gateway microservice in front of this one managing webhooks.
 
 at best you modify this project to work with webhooks or without and push your changes.
