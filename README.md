@@ -37,7 +37,7 @@ https://stackoverflow.com/a/48845880
 `$ KEMAL_ENV=production ./slippy 3000` 
 
 ``` bash
-$ curl -i --header "Content-Type: application/json" --request POST --data '{"zoom": 14, "pois": [{"lat":50.0, "lng":8.0}, {"lat":50.0, "lng":8.0}, {"lat":51.0, "lng":8.0}, ]}' http://localhost:3000/geopoints
+$ curl -i --header "Content-Type: application/json" --request POST --data '{"zoom": 14, "pois": [{"lat":50.0, "lng":8.0}, {"lat":50.0, "lng":8.0}, {"lat":51.0, "lng":8.0}]}' http://localhost:3000/geopoints
 ```
 
 ## Development
