@@ -34,4 +34,5 @@ end
 
 port = ARGV[0]?.try &.to_i?
 default_port = 3000
+Kemal.config.host_binding = "0.0.0.0"
 Kemal.run(port || default_port)

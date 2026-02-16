@@ -7,15 +7,19 @@ authors:
 targets:
   slippy:
     main: src/slippy.cr
+
 dependencies:
-  spec-kemal:
-    github: kemalcr/spec-kemal
-    branch: master
   kemal:
     github: kemalcr/kemal
+  kemal-session:
+    github: kemalcr/kemal-session
   slippy_tiles:
     github: simonneutert/slippy_tiles
 
-crystal: 1.0.0
+development_dependencies:
+  spec-kemal:
+    github: kemalcr/spec-kemal
+
+crystal: 1.19.1
 
 license: MIT
