@@ -1,4 +1,4 @@
-FROM crystallang/crystal:1.19.1-alpine-build AS build
+FROM crystallang/crystal:1.20.2-alpine-build AS build
 
 WORKDIR /app
 COPY src/ src/

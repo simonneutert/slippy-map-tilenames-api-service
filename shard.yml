@@ -1,5 +1,5 @@
 name: slippy
-version: 0.1.0
+version: 0.1.1
 
 authors:
   - Simon Neutert <simonneutert@users.noreply.github.com>
@@ -20,6 +20,6 @@ development_dependencies:
   spec-kemal:
     github: kemalcr/spec-kemal
 
-crystal: 1.19.1
+crystal: 1.20.2
 
 license: MIT
